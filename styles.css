@@ -1,6 +1,13 @@
 body {
   background-color: #3C486B;
   height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .bg {
@@ -18,22 +25,15 @@ body {
   margin: auto;
 
   text-align: center;
-  height: 100%;
-
-  min-height: calc(100vh - 3em);
-
 }
 
-.container,
-footer {
-  height: 100%;
-}
 
 h1,
 h2,
 h3,
 h4,
-p {
+p,
+button {
   text-shadow:
     0.05em 0 #3C486B,
     0 0.05em #3C486B,
@@ -45,18 +45,17 @@ p {
     0.05em 0.05em #3C486B;
 }
 
+
+
 h1,
 h2 {
-  margin: .3em;
-  margin-top: 0;
+  margin: 0;
 
   font-family: 'Lobster', cursive;
   font-size: 8rem;
   color: #F9D949;
 
 }
-
-
 
 h2 {
   font-size: 5rem;
@@ -76,9 +75,12 @@ h4 {
   font-size: 3rem;
 }
 
+
 #wrapper {
   display: inline-flex;
+
   margin: 2em;
+  margin-top: .5em;
 
   position: relative;
 }
@@ -122,10 +124,10 @@ h4 {
   margin: .3em;
 
   border-radius: .3em;
-
 }
 
-.card-title {
+.card-title,
+.info {
   margin: auto;
   margin-bottom: 1em;
 
@@ -149,7 +151,6 @@ h4 {
   margin: auto;
 }
 
-
 .dot {
   width: .9rem;
   height: .9rem;
@@ -168,11 +169,63 @@ h4 {
   align-items: center;
 }
 
-a {
+button {
+  display: block;
+  margin: auto;
   color: #F9D949;
+  background-color: #F45050;
+  border: none;
+
+  padding: .5em;
+
+  border-radius: 4px;
+
+  font-size: 1.5rem;
+
+
+  transition: box-shadow 0.3s ease-in-out;
+  box-shadow: 0 0 2.5px #F9D949,
+    0 0 5px #F9D949,
+    0 0 15px #F9D949,
+    0 0 50px #F9D949;
+
 }
 
-a:visited {
+button:hover {
+  box-shadow: 0 0 5px #F9D949,
+    0 0 25px #F9D949,
+    0 0 50px #F9D949,
+    0 0 200px #F9D949;
+  transition: box-shadow 0.3s ease-in-out;
+  transform: scale(1.05, 1.05);
+}
+
+
+button .rotate {
+  animation: rotation 4s infinite alternate, ease;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(720deg);
+  }
+}
+
+
+a {
+  color: #F9D949;
+  text-decoration: none;
+}
+
+footer a {
+  text-decoration: underline;
+}
+
+footer a:visited {
   color: #F0F0F0;
 }
 
@@ -181,8 +234,11 @@ footer {
   text-align: center;
   font-family: 'Indie Flower', cursive;
 
-  width: 70%;
+  width: 100%;
   margin: auto;
+  margin-bottom: 0;
 
   height: 3em;
+
+
 }
