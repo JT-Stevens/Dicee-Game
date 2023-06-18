@@ -20,6 +20,7 @@ body {
   margin: 0;
 }
 
+
 .container {
   width: 70%;
   margin: auto;
@@ -92,6 +93,7 @@ h4 {
 .player-2-won {
   justify-content: flex-end;
 }
+
 
 #border {
   position: absolute;

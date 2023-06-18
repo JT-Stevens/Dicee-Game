@@ -16,58 +16,61 @@
 
   <div class="container">
     <h1>
-     
+
       Dice Game
-    <p class="info">
-      <i class="fa-solid fa-circle-info"></i>
-      Player with the highest number wins!</p>
-    <h2 hidden id="Tie">Tie Game!</h2>
-    <h2 hidden id="player-1-won">Player One Won!</h2>
-    <h2 hidden id="player-2-won">Player Two Won!</h2>
+      <p class="info">
+        <i class="fa-solid fa-circle-info"></i>
+        Player with the highest number wins!
+      </p>
 
-    <div id="wrapper">
-      <div id="border">
-      </div>
-      <div id="player1" class="dice-card">
-        
-        <p class="card-title">Player 1</p>
+      <h2 hidden id="Tie">Tie Game!</h2>
+      <h2 hidden id="player-1-won">Player One Won!</h2>
+      <h2 hidden id="player-2-won">Player Two Won!</h2>
+      <h2 id="rolling">Rolling...</h2>
 
-        <div class="dice-face">
-          <div class="row">
-            <div class="dot"></div>
-            <div class="dot"></div>
-          </div>
-          <div class="row">
-            <div class="dot"></div>
-            <div class="dot"></div>
-          </div>
-          <div class="row">
-            <div class="dot"></div>
-            <div class="dot"></div>
+      <div id="wrapper">
+        <div hidden id="border">
+        </div>
+        <div id="player1" class="dice-card">
+
+          <p class="card-title">Player 1</p>
+
+          <div class="dice-face">
+            <div class="row">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="row">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="row">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div id="player2" class="dice-card">
-        <p class="card-title">Player 2</p>
-        <div class="dice-face">
-          <div class="row">
-            <div class="dot"></div>
-            <div class="dot"></div>
-          </div>
-          <div class="row">
-            <div class="dot"></div>
-            <div class="dot"></div>
-          </div>
-          <div class="row">
-            <div class="dot"></div>
-            <div class="dot"></div>
+        <div id="player2" class="dice-card">
+          <p class="card-title">Player 2</p>
+          <div class="dice-face">
+            <div class="row">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="row">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="row">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
           </div>
         </div>
+
+
       </div>
-
-
-    </div>
       <button type="button" onClick="window.location.reload();">
         <i class="fa-solid fa-dice-six rotate"></i>
         Roll The Dice</button>
@@ -79,7 +82,7 @@
 <footer>
   🎲 JT-Stevens -
   <a href="https://jt-stevens.github.io/portfolio/">Portfolio</a>
-  <a href="https://github.com/JT-Stevens">Github</a> 🎲 
+  <a href="https://github.com/JT-Stevens">Github</a> 🎲
 </footer>
 
 </html>

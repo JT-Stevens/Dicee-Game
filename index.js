@@ -3,7 +3,7 @@ function getRandomNum() {
     return Math.floor(Math.random() * 6) + 1;
 }
 
-//Responsable for changing the appeance of the dice face
+//Responsible for changing the appearance of the dice face
 function changeDieFace(num, diceFace) {
     var pipArr = diceFace.getElementsByClassName("dot");
 
@@ -53,24 +53,56 @@ function changeDieFace(num, diceFace) {
     }
 }
 
+//Resets the appearance.
+function reset() {
+    var pipArr = document.getElementsByClassName("dot");
+    for (let i = 0; i < pipArr.length; i++) {
+        pipArr[i].hidden = false;
+    }
+
+    var rowArr = document.getElementsByClassName("row");
+    for (let i = 0; i < rowArr.length; i++){
+        rowArr[i].style.justifyContent = "space-evenly";
+    }
+}
+
 //Based off who wins, changes the winning border and winning text
 function styleWinner() {
+    document.getElementById("rolling").toggleAttribute('hidden');
+    
     if (die1 === die2) {
-        document.getElementById("border").toggleAttribute('hidden');
+        
         document.getElementById("Tie").toggleAttribute("hidden");
     } else if (die1 > die2) {
+        document.getElementById("border").toggleAttribute('hidden');
         document.getElementById("wrapper").classList.add("player-1-won");
         document.getElementById("player-1-won").toggleAttribute("hidden");
-    } else{
+    } else {
+        document.getElementById("border").toggleAttribute('hidden');
         document.getElementById("wrapper").classList.add("player-2-won");
         document.getElementById("player-2-won").toggleAttribute("hidden");
     }
 }
 
-var die1 = getRandomNum();
-var die2 = getRandomNum();
+function rollDice() {
+    reset();
+    die1 = getRandomNum();
+    die2 = getRandomNum();
+    
+    changeDieFace(die1, document.getElementById("player1"));
+    changeDieFace(die2, document.getElementById("player2"));
+}
 
-changeDieFace(die1, document.getElementById("player1"));
-changeDieFace(die2, document.getElementById("player2"));
+let die1 = 6;
+let die2 = 6;
 
-styleWinner();
+//Roll the dice for one second. Display winner when done.
+let animation = setInterval(rollDice, 80);
+setTimeout(function () {
+    clearInterval(animation);
+    setTimeout(styleWinner(), 1010);
+}, 1000);
+
+
+
+
