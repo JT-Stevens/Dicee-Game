@@ -1,20 +1,62 @@
 body {
   background-color: #3C486B;
+  height: 100%;
+}
+
+.bg {
+  background-image: url("Images/DiceBackground.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  background-size: cover;
+
+  margin: 0;
 }
 
 .container {
   width: 70%;
   margin: auto;
+
   text-align: center;
+  height: 100%;
+
+  min-height: calc(100vh - 3em);
+
 }
 
-h1, h2 {
+.container,
+footer {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  text-shadow:
+    0.05em 0 #3C486B,
+    0 0.05em #3C486B,
+    -0.05em 0 #3C486B,
+    0 -0.05em #3C486B,
+    -0.05em -0.05em #3C486B,
+    -0.05em 0.05em #3C486B,
+    0.05em -0.05em #3C486B,
+    0.05em 0.05em #3C486B;
+}
+
+h1,
+h2 {
   margin: .3em;
+  margin-top: 0;
+
   font-family: 'Lobster', cursive;
-  text-shadow: 5px 0 #232931;
   font-size: 8rem;
   color: #F9D949;
+
 }
+
+
 
 h2 {
   font-size: 5rem;
@@ -22,34 +64,34 @@ h2 {
   font-family: 'Indie Flower', cursive;
 }
 
-h3, h4 {
+h3,
+h4 {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  text-shadow: 5px 0 #232931;
   font-size: 4rem;
   color: #F0F0F0;
 }
 
-h4{
+h4 {
   font-size: 3rem;
 }
 
-#wrapper{
+#wrapper {
   display: inline-flex;
   margin: 2em;
-  
+
   position: relative;
 }
 
-.player-1-won{
+.player-1-won {
   justify-content: flex-start;
 }
 
-.player-2-won{
+.player-2-won {
   justify-content: flex-end;
 }
 
-#border{
+#border {
   position: absolute;
 
   height: 100%;
@@ -70,7 +112,7 @@ h4{
   }
 }
 
-.dice-card{
+.dice-card {
   background-color: #3C486B;
 
   height: 10rem;
@@ -80,9 +122,10 @@ h4{
   margin: .3em;
 
   border-radius: .3em;
+
 }
 
-.card-title{
+.card-title {
   margin: auto;
   margin-bottom: 1em;
 
@@ -91,7 +134,7 @@ h4{
   font-family: 'Indie Flower', cursive;
 }
 
-.dice-face{
+.dice-face {
   width: 5rem;
   height: 5rem;
   background-color: #F45050;
@@ -107,7 +150,7 @@ h4{
 }
 
 
-.dot{
+.dot {
   width: .9rem;
   height: .9rem;
 
@@ -118,27 +161,28 @@ h4{
   border-radius: 50%;
 }
 
-.row{
+.row {
   display: flex;
   flex-basis: 100%;
   justify-content: space-around;
   align-items: center;
 }
 
-a{
+a {
   color: #F9D949;
 }
 
-a:visited{
+a:visited {
   color: #F0F0F0;
 }
 
 footer {
-  margin-top: 5%;
   color: #F9D949;
   text-align: center;
   font-family: 'Indie Flower', cursive;
+
+  width: 70%;
+  margin: auto;
+
+  height: 3em;
 }
-
-
-
